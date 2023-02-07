@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { verify } from "jsonwebtoken";
 
-const secret = "bestSecretKey69";
+const secret = process.env.SECRET;
 
 export default async function middleware(req) {
   const { cookies } = req;
@@ -11,9 +11,10 @@ export default async function middleware(req) {
   if (url.includes("/login")) {
     if (jwt) {
       try {
-        // verify(jwt, secret);
+        verify(jwt, secret, { algorithms: "HS256" });
         return NextResponse.redirect("/");
       } catch (e) {
+        console.log(e, "erorr verify");
         return NextResponse.next();
       }
     }
@@ -24,9 +25,10 @@ export default async function middleware(req) {
       return NextResponse.redirect("/login");
     }
     try {
-      // verify(jwt, secret);
+      verify(jwt, secret);
       return NextResponse.next();
     } catch (e) {
+      console.log(e, "erorr verify");
       return NextResponse.redirect("login");
     }
   }

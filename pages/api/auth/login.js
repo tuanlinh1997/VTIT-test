@@ -2,7 +2,7 @@
 import { sign } from "jsonwebtoken";
 import { serialize } from "cookie";
 
-const secret = "bestSecretKey69";
+const secret = process.env.SECRET;
 const users = require("data/users.json");
 export default async function (req, res) {
   const { username, password } = req.body;
