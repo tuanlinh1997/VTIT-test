@@ -5,21 +5,32 @@ import { NavLink } from "./NavLink";
 import { NavBarStyle } from "./index.style";
 // import { userService } from "services";
 import { Input } from "antd";
+import axios from "axios";
 const { Search } = Input;
 
 export { Nav };
 
 function Nav() {
-  //   const [user, setUser] = useState(null);
+  const [user, setUser] = useState(false);
+  const accessToken =
+    typeof window !== "undefined" && window.localStorage.getItem("accessToken");
 
-  //   useEffect(() => {
-  //     const subscription = userService.user.subscribe((x) => setUser(x));
-  //     return () => subscription.unsubscribe();
-  //   }, []);
+  useEffect(() => {
+    if (accessToken) {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+  }, [accessToken]);
 
-  //   function logout() {
-  //     userService.logout();
-  //   }
+  const logout = async () => {
+    const logout = await axios.get("/api/auth/logout");
+    if (logout.status === 200) {
+      typeof window !== "undefined" &&
+        window.localStorage.removeItem("accessToken");
+      setUser(false);
+    }
+  };
 
   // only show nav when logged in
   //   if (!user) return null;
@@ -42,10 +53,18 @@ function Nav() {
             size="large"
           />
         </NavLink>
-        <NavLink href="/cart" className="nav-item nav-link">
+        <NavLink href="/cart" className="nav-cart">
           <ShoppingCartOutlined style={{ fontSize: "32px" }} />
         </NavLink>
-
+        {!user ? (
+          <NavLink href="/login" className="nav-login ">
+            Đăng Nhập
+          </NavLink>
+        ) : (
+          <a onClick={logout} className="nav-logout">
+            Đăng xuất
+          </a>
+        )}
         {/* <a onClick={logout} className="nav-item nav-link">
           Logout
         </a> */}

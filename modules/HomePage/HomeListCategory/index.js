@@ -1,4 +1,4 @@
-import { Card, Image } from "antd";
+import { Card, Col, Image } from "antd";
 import React from "react";
 const { Meta } = Card;
 export default function HomeListCategory({ data }) {
@@ -40,7 +40,6 @@ export default function HomeListCategory({ data }) {
   };
 
   const OfficialStore = (data) => {
-    console.log(data);
     return (
       <>
         <div className="official-store-content-body">
@@ -69,6 +68,35 @@ export default function HomeListCategory({ data }) {
     );
   };
 
+  const CategoryList = (data) => {
+    console.log(data);
+    return (
+      <>
+        <div className="category-list-content-body">
+          {data &&
+            data.data.data.map((item) => (
+              <Col key={item.id} span={3}>
+                <Card
+                  hoverable
+                  cover={
+                    <Image
+                      alt="example"
+                      src={item.categoryImg}
+                      preview={false}
+                    />
+                  }
+                >
+                  <div className="card-title">
+                    <span className="name">{item.categoryName}</span>
+                  </div>
+                </Card>
+              </Col>
+            ))}
+        </div>
+      </>
+    );
+  };
+
   return (
     <div className="home-category">
       <div className="home-category-header">
@@ -77,6 +105,7 @@ export default function HomeListCategory({ data }) {
       <div className="home-category-content">
         {data && data.id === "1" && <FlashSale data={data}></FlashSale>}
         {data && data.id === "2" && <OfficialStore data={data}></OfficialStore>}
+        {data && data.id === "3" && <CategoryList data={data}></CategoryList>}
       </div>
     </div>
   );

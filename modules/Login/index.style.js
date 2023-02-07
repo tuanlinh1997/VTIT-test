@@ -2,6 +2,7 @@ import styled from "styled-components";
 const LoginModuleStyle = styled.div`
   width: 50%;
   margin: auto;
+  padding-top: 10rem;
   .login-title {
     display: flex;
     line-height: 26px;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 const HomePageStyle = styled.div`
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 5rem;
+  margin: 0 10rem;
   .card-channels {
     padding-top: 1rem;
     .ant-row .card-channels-item {
@@ -172,6 +173,53 @@ const HomePageStyle = styled.div`
             position: relative;
             margin: -25px auto 0;
             overflow: hidden;
+          }
+        }
+        .card-title {
+          text-align: center;
+          .des {
+            font-size: 12px;
+            line-height: 14px;
+            color: #9e9e9e;
+            margin: 0 8px;
+          }
+        }
+      }
+      .category-list-content-body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        .ant-col {
+          height: 150px;
+          .ant-card {
+            padding-top: 1rem;
+            .ant-card-cover {
+              width: 80px;
+              height: 80px;
+              margin: 0 auto;
+              img {
+                width: 80px;
+                height: 80px;
+              }
+            }
+            .ant-card-body {
+              padding: 0;
+              text-align: center;
+              .card-title {
+                margin-top: 10px;
+                .name {
+                  margin: 8px 12px 0;
+                  font-size: 14px;
+                  color: #212121;
+                  line-height: 18px;
+                  height: 36px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                }
+              }
+            }
           }
         }
       }

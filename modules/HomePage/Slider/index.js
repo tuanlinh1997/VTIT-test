@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Slider({ banner }) {
   return (
-    <Carousel effect="fade">
+    <Carousel effect="fade" autoplay={true}>
       {banner &&
         banner.map((item) => (
           <div key={item.id}>
