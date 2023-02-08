@@ -2,25 +2,30 @@
     {   "id": "1",
         "category_name": "Deal Chớp Nhoáng",
         "data": [
-            {
+            {   "productId": "1",
                 "currency": "₫",
                 "itemDiscount": "74%",
                 "itemDiscountPrice": "10.000",
                 "itemPrice": "38.000",
                 "itemTitle": "Ốp iphone - Ốp lưng iphone cạnh vuông viền camera Cún cầm hoa dành cho ip 6 đến 14promax - ng171",
-                "itemImg": "https://vn-live-01.slatic.net/p/f11e00024f249e3315378cfc36d888cc.png"
+                "itemImg": "https://vn-live-01.slatic.net/p/f11e00024f249e3315378cfc36d888cc.png",
+                "key": "1"
+
 
             }, 
-            {
+            {   "productId": "2",
                 "currency": "₫",
                 "itemDiscount": "-65%",
                 "itemDiscountPrice": "123.950",
                 "itemPrice": "350.000",
                 "itemTitle": "Kệ đựng đồ đa năng 3 tầng có bánh xe 360 siêu tiện ích việt nhật (3 ngăn treo giống nhau)", 
-                "itemImg": "https://lzd-img-global.slatic.net/g/p/2086f674b1808aca829c384ab89090ed.jpg_200x200q80.jpg_.webp"
+                "itemImg": "https://lzd-img-global.slatic.net/g/p/2086f674b1808aca829c384ab89090ed.jpg_200x200q80.jpg_.webp",
+                "key": "2"
 
             }, 
-            {
+
+            {   "key": "3",
+                "productId": "3",
                 "currency": "₫",
                 "itemDiscount": "74%",
                 "itemDiscountPrice": "10.000",
@@ -30,7 +35,8 @@
 
 
             }, 
-            {
+            {   "key": "4",
+                "productId": "4",
                 "currency": "₫",
                 "itemDiscount": "74%",
                 "itemDiscountPrice": "10.000",
@@ -41,6 +47,8 @@
 
             },
                   {
+                    "key": "5",
+                    "productId": "5",
                 "currency": "₫",
                 "itemDiscount": "-65%",
                 "itemDiscountPrice": "123.950",
@@ -49,7 +57,8 @@
                 "itemImg": "https://lzd-img-global.slatic.net/g/p/fada0b5f6207948ddc3530042728ae2f.png_200x200q80.jpg_.webp"
 
             }, 
-              {
+              { "key": "6",
+                "productId": "6",
                 "currency": "₫",
                 "itemDiscount": "74%",
                 "itemDiscountPrice": "10.000",

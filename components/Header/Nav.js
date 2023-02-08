@@ -32,6 +32,13 @@ function Nav() {
     }
   };
 
+  // const orders =
+  //   typeof window !== "undefined" &&
+  //   window.localStorage.getItem("OrderProduct");
+  // useEffect(() => {
+  //   console.log(orders, "orders");
+  // }, [orders]);
+
   // only show nav when logged in
   //   if (!user) return null;
 

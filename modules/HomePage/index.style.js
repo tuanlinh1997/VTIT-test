@@ -68,6 +68,20 @@ const HomePageStyle = styled.div`
           font-size: 14px;
           margin-right: 10px;
           color: #202020;
+          display: flex;
+          #hours,
+          #minutes,
+          #seconds {
+            border-radius: 2px;
+            font-weight: 500;
+            margin: 12px 6px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #d3232a;
+            text-align: center;
+            line-height: 35px;
+            width: 40px;
+          }
         }
         .fs-header-right {
           font-weight: 500;
@@ -97,18 +111,13 @@ const HomePageStyle = styled.div`
       .official-store-content-body {
         display: flex;
         justify-content: space-between;
+
         .ant-card {
-          margin: 10px 10px;
           border: none;
-          &:first-child {
-            margin: 10px 10px 10px 0px;
-          }
-          &:last-child {
-            margin: 10px 0px 10px 10px;
-          }
+          margin: 10px 0;
           .ant-card-cover {
             img {
-              width: 188px;
+              ${"" /* width: 188px; */}
               height: 188px;
             }
           }
@@ -143,9 +152,10 @@ const HomePageStyle = styled.div`
         }
       }
       .official-store-content-body {
+        display: block;
         .card-official-stores-brand-overlay {
-          width: 188px;
-          height: 25px;
+          width: 100%;
+          height: 34px;
           top: 155px;
           left: 0;
           position: absolute;
